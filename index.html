@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collision Appraisal Group — Auto Damage Experts &amp; Claim Consultants</title>
+  <meta name="description" content="Get an AI-assisted preliminary collision repair estimate. Final review by a licensed appraiser." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="brand" aria-label="Collision Appraisal Group home">
+        <div class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 72" width="44" height="50">
+            <defs>
+              <linearGradient id="shieldGrad" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="#1f88ff"/>
+                <stop offset="100%" stop-color="#0a4d99"/>
+              </linearGradient>
+            </defs>
+            <path d="M32 2 L60 10 V36 C60 54 46 66 32 70 C18 66 4 54 4 36 V10 Z"
+                  fill="url(#shieldGrad)" stroke="#9aa3ad" stroke-width="2"/>
+            <path d="M14 42 L20 32 H44 L50 42 Z M18 44 H46 V50 H18 Z"
+                  fill="#e6e9ee"/>
+            <circle cx="22" cy="50" r="3" fill="#1a1a1a"/>
+            <circle cx="42" cy="50" r="3" fill="#1a1a1a"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-line-1">COLLISION</span>
+          <span class="brand-line-2">APPRAISAL GROUP</span>
+          <span class="brand-tagline">Auto Damage Experts &amp; Claim Consultants</span>
+        </div>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#estimate">Get Estimate</a>
+        <a href="#how">How It Works</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>AI-Assisted Collision Estimates in Minutes</h1>
+      <p class="hero-sub">
+        Upload photos and your vehicle details. Our AI reviews the damage and gives you
+        a preliminary repair estimate — fast, transparent, and reviewable by a licensed appraiser.
+      </p>
+      <a class="btn btn-primary btn-lg" href="#estimate">Start Your Estimate</a>
+    </div>
+  </section>
+
+  <section id="how" class="how">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">1</span>
+          <h3>Enter Vehicle Info</h3>
+          <p>VIN, year, make, model, and color — we use this to identify parts and OEM pricing.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">2</span>
+          <h3>Upload Damage Photos</h3>
+          <p>Clear photos of every damaged area. Our AI analyzes panel damage and severity.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">3</span>
+          <h3>Get a Preliminary Estimate</h3>
+          <p>Pay the appraisal fee and receive an itemized estimate range within minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="estimate" class="estimate">
+    <div class="container">
+      <h2>Request an AI Estimate</h2>
+      <p class="lead">Complete the form below. After submission you'll be prompted to pay the appraisal fee.</p>
+
+      <form id="estimate-form" class="estimate-form" novalidate>
+        <div class="grid">
+          <label>
+            <span>Full Name</span>
+            <input type="text" name="name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" required />
+          </label>
+          <label>
+            <span>Phone</span>
+            <input type="tel" name="phone" />
+          </label>
+          <label>
+            <span>VIN (17 characters)</span>
+            <input type="text" name="vin" maxlength="17" minlength="11" required pattern="[A-HJ-NPR-Z0-9]+" />
+          </label>
+          <label>
+            <span>Year</span>
+            <input type="number" name="year" min="1980" max="2027" required />
+          </label>
+          <label>
+            <span>Make</span>
+            <input type="text" name="make" required />
+          </label>
+          <label>
+            <span>Model</span>
+            <input type="text" name="model" required />
+          </label>
+          <label>
+            <span>Color</span>
+            <input type="text" name="color" required />
+          </label>
+          <label>
+            <span>Mileage (approx.)</span>
+            <input type="number" name="mileage" min="0" />
+          </label>
+          <label class="full">
+            <span>Describe the Damage</span>
+            <textarea name="description" rows="4" placeholder="e.g., Front bumper and right fender damage from low-speed collision."></textarea>
+          </label>
+          <label class="full">
+            <span>Upload Damage Photos</span>
+            <input type="file" name="photos" accept="image/*" multiple />
+          </label>
+        </div>
+
+        <div class="disclaimer">
+          <strong>Important:</strong> Estimates generated through this tool are
+          <em>preliminary AI-assisted estimates based solely on the photos and information you provide</em>.
+          They are <strong>not final or guaranteed</strong> and are
+          <strong>not accurate until reviewed by a licensed appraiser in person</strong>.
+          Actual repair costs may vary based on hidden damage, parts availability, and labor rates.
+        </div>
+
+        <label class="checkbox">
+          <input type="checkbox" name="agree" required />
+          <span>I understand this is a preliminary estimate and requires in-person review for final pricing.</span>
+        </label>
+
+        <button type="submit" class="btn btn-primary btn-lg">Generate Preliminary Estimate</button>
+      </form>
+
+      <div id="result" class="result" hidden>
+        <h3>Your Preliminary AI Estimate</h3>
+        <div id="result-body"></div>
+
+        <div class="payment">
+          <h4>Pay Appraisal Fee to Receive Full Report</h4>
+          <p>A flat <strong>$49.00</strong> appraisal fee unlocks your itemized report and licensed-appraiser review.</p>
+          <div class="pay-buttons">
+            <a id="paypal-link" class="btn btn-pay paypal" target="_blank" rel="noopener">
+              Pay with PayPal
+            </a>
+            <a id="applepay-link" class="btn btn-pay applepay" href="#">
+              Pay with Apple Pay
+            </a>
+          </div>
+          <p class="pay-note">Payments are processed securely. You'll receive a confirmation email with your full report.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Collision Appraisal Group</strong>
+        <p>Auto Damage Experts &amp; Claim Consultants</p>
+      </div>
+      <div>
+        <p>Email: info@collisionappraisalgroup.example</p>
+        <p>Phone: (555) 123-4567</p>
+      </div>
+      <div class="copy">
+        &copy; <span id="year"></span> Collision Appraisal Group. Sample site — for review only.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
