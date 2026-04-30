@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Collision Appraisal Group — Auto Damage Experts &amp; Claim Consultants</title>
-  <meta name="description" content="Get an AI-assisted preliminary collision repair estimate. Final review by a licensed appraiser." />
+  <meta name="description" content="Collision Appraisal Group specializes in auto damage appraisals and insurance claim consultations to provide the most accurate evaluation for repairing your vehicle." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#" class="brand" aria-label="Collision Appraisal Group home">
+      <a href="#top" class="brand" aria-label="Collision Appraisal Group home">
         <div class="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 64 72" width="44" height="50">
             <defs>
@@ -34,149 +34,177 @@
         </div>
       </a>
       <nav class="site-nav" aria-label="Primary">
-        <a href="#estimate">Get Estimate</a>
-        <a href="#how">How It Works</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero">
+  <section id="top" class="hero">
     <div class="container">
-      <h1>AI-Assisted Collision Estimates in Minutes</h1>
+      <h1>Accurate Auto Damage Appraisals &amp; Claim Consultations</h1>
       <p class="hero-sub">
-        Upload photos and your vehicle details. Our AI reviews the damage and gives you
-        a preliminary repair estimate — fast, transparent, and reviewable by a licensed appraiser.
+        We specialize in auto damage appraisals and claim consultations to provide
+        you with the most accurate evaluation when it comes to repairing damages to your vehicle.
       </p>
-      <a class="btn btn-primary btn-lg" href="#estimate">Start Your Estimate</a>
-    </div>
-  </section>
-
-  <section id="how" class="how">
-    <div class="container">
-      <h2>How It Works</h2>
-      <div class="steps">
-        <div class="step">
-          <span class="step-num">1</span>
-          <h3>Enter Vehicle Info</h3>
-          <p>VIN, year, make, model, and color — we use this to identify parts and OEM pricing.</p>
-        </div>
-        <div class="step">
-          <span class="step-num">2</span>
-          <h3>Upload Damage Photos</h3>
-          <p>Clear photos of every damaged area. Our AI analyzes panel damage and severity.</p>
-        </div>
-        <div class="step">
-          <span class="step-num">3</span>
-          <h3>Get a Preliminary Estimate</h3>
-          <p>Pay the appraisal fee and receive an itemized estimate range within minutes.</p>
-        </div>
+      <div class="hero-actions">
+        <a class="btn btn-primary btn-lg" href="#contact">Contact Us</a>
+        <a class="btn btn-ghost btn-lg" href="#services">Our Services</a>
       </div>
     </div>
   </section>
 
-  <section id="estimate" class="estimate">
+  <section id="services" class="section">
     <div class="container">
-      <h2>Request an AI Estimate</h2>
-      <p class="lead">Complete the form below. After submission you'll be prompted to pay the appraisal fee.</p>
+      <h2>What We Do</h2>
+      <p class="lead">
+        Independent, experienced, and on your side. Whether you're a vehicle owner, a body shop,
+        or an attorney, we deliver clear, defensible damage evaluations.
+      </p>
 
-      <form id="estimate-form" class="estimate-form" novalidate>
-        <div class="grid">
-          <label>
-            <span>Full Name</span>
-            <input type="text" name="name" required />
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" required />
-          </label>
-          <label>
-            <span>Phone</span>
-            <input type="tel" name="phone" />
-          </label>
-          <label>
-            <span>VIN (17 characters)</span>
-            <input type="text" name="vin" maxlength="17" minlength="11" required pattern="[A-HJ-NPR-Z0-9]+" />
-          </label>
-          <label>
-            <span>Year</span>
-            <input type="number" name="year" min="1980" max="2027" required />
-          </label>
-          <label>
-            <span>Make</span>
-            <input type="text" name="make" required />
-          </label>
-          <label>
-            <span>Model</span>
-            <input type="text" name="model" required />
-          </label>
-          <label>
-            <span>Color</span>
-            <input type="text" name="color" required />
-          </label>
-          <label>
-            <span>Mileage (approx.)</span>
-            <input type="number" name="mileage" min="0" />
-          </label>
-          <label class="full">
-            <span>Describe the Damage</span>
-            <textarea name="description" rows="4" placeholder="e.g., Front bumper and right fender damage from low-speed collision."></textarea>
-          </label>
-          <label class="full">
-            <span>Upload Damage Photos</span>
-            <input type="file" name="photos" accept="image/*" multiple />
-          </label>
-        </div>
-
-        <div class="disclaimer">
-          <strong>Important:</strong> Estimates generated through this tool are
-          <em>preliminary AI-assisted estimates based solely on the photos and information you provide</em>.
-          They are <strong>not final or guaranteed</strong> and are
-          <strong>not accurate until reviewed by a licensed appraiser in person</strong>.
-          Actual repair costs may vary based on hidden damage, parts availability, and labor rates.
-        </div>
-
-        <label class="checkbox">
-          <input type="checkbox" name="agree" required />
-          <span>I understand this is a preliminary estimate and requires in-person review for final pricing.</span>
-        </label>
-
-        <button type="submit" class="btn btn-primary btn-lg">Generate Preliminary Estimate</button>
-      </form>
-
-      <div id="result" class="result" hidden>
-        <h3>Your Preliminary AI Estimate</h3>
-        <div id="result-body"></div>
-
-        <div class="payment">
-          <h4>Pay Appraisal Fee to Receive Full Report</h4>
-          <p>A flat <strong>$49.00</strong> appraisal fee unlocks your itemized report and licensed-appraiser review.</p>
-          <div class="pay-buttons">
-            <a id="paypal-link" class="btn btn-pay paypal" target="_blank" rel="noopener">
-              Pay with PayPal
-            </a>
-            <a id="applepay-link" class="btn btn-pay applepay" href="#">
-              Pay with Apple Pay
-            </a>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
-          <p class="pay-note">Payments are processed securely. You'll receive a confirmation email with your full report.</p>
+          <h3>Auto Damage Appraisals</h3>
+          <p>Detailed inspections and itemized damage reports for collision, hail, flood, and total-loss valuations.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Insurance Claim Consultations</h3>
+          <p>We help you understand your policy, dispute lowball offers, and negotiate fair settlements with insurers.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg>
+          </div>
+          <h3>Diminished Value Reports</h3>
+          <p>Documented loss-of-value reports for vehicles that have been in an accident — even after repairs.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
+          </div>
+          <h3>Pre-Repair Estimates</h3>
+          <p>Independent estimates before repairs begin so you know what the work should actually cost.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
+          </div>
+          <h3>Total Loss Valuations</h3>
+          <p>Fair-market value reports that protect you when an insurer declares your vehicle a total loss.</p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Expert Witness Services</h3>
+          <p>Court-ready reports and testimony for attorneys handling auto-damage and insurance disputes.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <footer id="contact" class="site-footer">
+  <section id="about" class="section section-alt">
+    <div class="container about">
+      <div>
+        <h2>Why Collision Appraisal Group</h2>
+        <p>
+          With years of hands-on experience in auto body repair and insurance claim handling,
+          our appraisers know what damage really costs to fix — and what insurers should be paying.
+          We work for <strong>you</strong>, not the insurance company.
+        </p>
+        <ul class="checks">
+          <li>Independent, unbiased evaluations</li>
+          <li>Licensed and experienced appraisers</li>
+          <li>Clear, itemized written reports</li>
+          <li>Fast turnaround when you need it</li>
+          <li>Statewide service</li>
+        </ul>
+      </div>
+      <div class="about-callout">
+        <div class="callout-num">100%</div>
+        <p>Independent. We don't work for insurance companies — we work for vehicle owners, shops, and attorneys.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <p class="lead">Get in touch for an appraisal or a claim consultation. We respond quickly.</p>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="tel:+15551234567">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-value">(555) 123-4567</div>
+          </div>
+        </a>
+
+        <a class="contact-card" href="mailto:info@collisionappraisalgroup.com">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-value">info@collisionappraisalgroup.com</div>
+          </div>
+        </a>
+
+        <div class="contact-card static">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Service Area</div>
+            <div class="contact-value">Statewide — by appointment</div>
+          </div>
+        </div>
+
+        <div class="contact-card static">
+          <div class="contact-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Hours</div>
+            <div class="contact-value">Mon–Fri, 9:00 AM – 6:00 PM</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-cta">
+        <a class="btn btn-primary btn-lg" href="mailto:info@collisionappraisalgroup.com">Email Us</a>
+        <a class="btn btn-ghost btn-lg" href="tel:+15551234567">Call Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
     <div class="container footer-inner">
       <div>
         <strong>Collision Appraisal Group</strong>
         <p>Auto Damage Experts &amp; Claim Consultants</p>
       </div>
       <div>
-        <p>Email: info@collisionappraisalgroup.example</p>
-        <p>Phone: (555) 123-4567</p>
+        <p>info@collisionappraisalgroup.com</p>
+        <p>(555) 123-4567</p>
       </div>
       <div class="copy">
-        &copy; <span id="year"></span> Collision Appraisal Group. Sample site — for review only.
+        &copy; <span id="year"></span> Collision Appraisal Group. All rights reserved.
       </div>
     </div>
   </footer>
