@@ -4,188 +4,442 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Collision Appraisal Group — Auto Damage Experts &amp; Claim Consultants</title>
-  <meta name="description" content="Collision Appraisal Group specializes in auto damage appraisals and insurance claim consultations to provide the most accurate evaluation for repairing your vehicle." />
+  <meta name="description" content="Independent auto damage appraisals, diminished value and total loss claims, and insurance claim consultations across South Florida. CCC ONE & USPAP-compliant reporting that fights insurer undervaluation." />
+  <meta name="theme-color" content="#0a0e14" />
+  <meta property="og:title" content="Collision Appraisal Group — Auto Damage Experts & Claim Consultants" />
+  <meta property="og:description" content="Independent appraisals and claim consultations across South Florida. We fight insurer undervaluation." />
+  <meta property="og:type" content="website" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
+  <!-- grain / texture overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header class="site-header" id="header">
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="Collision Appraisal Group home">
         <img src="assets/logo.jpeg" alt="Collision Appraisal Group — Auto Damage Experts &amp; Claim Consultants" class="brand-logo" />
       </a>
       <nav class="site-nav" aria-label="Primary">
         <a href="#services">Services</a>
-        <a href="#about">About</a>
+        <a href="#ccc">CCC ONE</a>
+        <a href="#process">Process</a>
+        <a href="#why">Why Us</a>
         <a href="#contact">Contact</a>
       </nav>
+      <a href="#contact" class="btn btn-primary btn-sm header-cta">Free Claim Review</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile">
+      <a href="#services">Services</a>
+      <a href="#ccc">CCC ONE</a>
+      <a href="#process">Process</a>
+      <a href="#why">Why Us</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn btn-primary">Free Claim Review</a>
+    </nav>
   </header>
 
+  <!-- ============ HERO ============ -->
   <section id="top" class="hero">
-    <div class="container">
-      <h1>Accurate Auto Damage Appraisals &amp; Claim Consultations</h1>
-      <p class="hero-sub">
-        We specialize in auto damage appraisals and claim consultations to provide
-        you with the most accurate evaluation when it comes to repairing damages to your vehicle.
-      </p>
-      <div class="hero-actions">
-        <a class="btn btn-primary btn-lg" href="#contact">Contact Us</a>
-        <a class="btn btn-ghost btn-lg" href="#services">Our Services</a>
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-glow glow-1"></div>
+      <div class="hero-glow glow-2"></div>
+      <div class="hero-grid"></div>
+      <span class="spark s1"></span>
+      <span class="spark s2"></span>
+      <span class="spark s3"></span>
+      <span class="spark s4"></span>
+      <span class="spark s5"></span>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy reveal">
+        <span class="eyebrow"><span class="pulse-dot"></span> Independent &amp; on your side — South Florida</span>
+        <h1>Don't let the insurer<br><span class="grad-text">decide what you're owed.</span></h1>
+        <p class="hero-sub">
+          We are auto damage experts and claim consultants. Using the same
+          <strong>CCC&nbsp;ONE</strong> platform the industry runs on, we build independent,
+          USPAP-compliant appraisals that stand up to any insurance company.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#contact">Get a Free Claim Review</a>
+          <a class="btn btn-ghost btn-lg" href="#services">
+            <span>Explore Services</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="hero-trust">
+          <div class="trust-item"><strong>USPAP</strong><span>Compliant Reports</span></div>
+          <div class="trust-divider"></div>
+          <div class="trust-item"><strong>CCC ONE</strong><span>Industry Platform</span></div>
+          <div class="trust-divider"></div>
+          <div class="trust-item"><strong>24/7</strong><span>South Florida</span></div>
+        </div>
+      </div>
+
+      <!-- Animated damaged-vehicle inspection illustration -->
+      <div class="hero-visual reveal" aria-hidden="true">
+        <div class="scan-card">
+          <div class="scan-head">
+            <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+            <span class="scan-title">DAMAGE ANALYSIS · CCC ONE</span>
+          </div>
+          <div class="scan-stage">
+            <svg viewBox="0 0 460 240" class="car-svg" role="img" aria-label="Damaged vehicle being analyzed">
+              <defs>
+                <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#e9edf2"/>
+                  <stop offset="55%" stop-color="#aeb6c2"/>
+                  <stop offset="100%" stop-color="#6b7480"/>
+                </linearGradient>
+                <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#2a3a52"/>
+                  <stop offset="100%" stop-color="#16202f"/>
+                </linearGradient>
+                <radialGradient id="impact" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#ff5a3c" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#ff5a3c" stop-opacity="0"/>
+                </radialGradient>
+              </defs>
+
+              <!-- ground shadow -->
+              <ellipse cx="230" cy="206" rx="180" ry="16" fill="#000" opacity="0.35"/>
+
+              <!-- car body -->
+              <path d="M40 168 C44 150 60 132 96 126 C120 102 150 92 196 92 L300 92
+                       C338 92 360 104 384 128 C408 132 420 146 424 168
+                       C426 182 420 188 408 188 L52 188 C40 188 38 180 40 168 Z"
+                    fill="url(#body)" stroke="#5b636e" stroke-width="2"/>
+              <!-- roof -->
+              <path d="M150 96 C170 80 200 74 236 74 L286 76 C312 80 330 92 344 110
+                       L196 110 C176 100 160 98 150 96 Z" fill="url(#glass)" opacity="0.95"/>
+              <!-- windows split -->
+              <path d="M240 78 L240 108" stroke="#0d1420" stroke-width="3"/>
+              <!-- door line -->
+              <path d="M236 112 L236 184" stroke="#5b636e" stroke-width="2" opacity="0.6"/>
+              <!-- wheels -->
+              <circle cx="128" cy="188" r="30" fill="#10141b"/>
+              <circle cx="128" cy="188" r="14" fill="#39424e"/>
+              <circle cx="330" cy="188" r="30" fill="#10141b"/>
+              <circle cx="330" cy="188" r="14" fill="#39424e"/>
+
+              <!-- headlight -->
+              <path d="M392 132 q18 8 22 24 l-26 0 q-2 -16 -10 -22 Z" fill="#cfe6ff" opacity="0.85"/>
+
+              <!-- ===== DAMAGE on front-left fender ===== -->
+              <g class="damage">
+                <circle cx="404" cy="160" r="34" fill="url(#impact)"/>
+                <!-- crumple lines -->
+                <path d="M384 140 L412 150 M388 158 L416 162 M386 174 L412 176 M396 186 L414 182"
+                      stroke="#c0392b" stroke-width="2.4" stroke-linecap="round" opacity="0.95"/>
+                <!-- cracks -->
+                <path d="M404 150 l8 -10 m-8 10 l-12 -4 m12 4 l4 14 m-4 -14 l-14 8"
+                      stroke="#7a1f14" stroke-width="1.8" stroke-linecap="round"/>
+              </g>
+
+              <!-- inspection reticle (animated via CSS) -->
+              <g class="reticle">
+                <circle cx="404" cy="160" r="26" fill="none" stroke="#1f88ff" stroke-width="2" stroke-dasharray="6 6"/>
+                <path d="M404 124 v12 M404 184 v12 M368 160 h12 M428 160 h12" stroke="#1f88ff" stroke-width="2"/>
+              </g>
+            </svg>
+
+            <!-- scan sweep -->
+            <div class="scan-line"></div>
+
+            <!-- floating tags -->
+            <span class="tag tag-1">Front fender · Replace</span>
+            <span class="tag tag-2">Hidden structural · Flag</span>
+          </div>
+          <div class="scan-foot">
+            <div class="meter"><span class="meter-label">Estimate confidence</span><span class="meter-bar"><i></i></span></div>
+            <span class="scan-status"><span class="pulse-dot green"></span> Analyzing damage…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a href="#stats" class="scroll-cue" aria-label="Scroll down">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section id="stats" class="stats">
+    <div class="container stats-grid">
+      <div class="stat reveal">
+        <div class="stat-num" data-target="4800" data-prefix="$" data-suffix="+">0</div>
+        <div class="stat-label">Avg. additional recovery</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num" data-target="97" data-suffix="%">0</div>
+        <div class="stat-label">Claim success rate</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num" data-target="80" data-suffix="%+">0</div>
+        <div class="stat-label">Industry runs on CCC ONE</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num" data-target="24" data-suffix="/7">0</div>
+        <div class="stat-label">South Florida availability</div>
       </div>
     </div>
   </section>
 
+  <!-- ============ SERVICES ============ -->
   <section id="services" class="section">
     <div class="container">
-      <h2>What We Do</h2>
-      <p class="lead">
-        Independent, experienced, and on your side. Whether you're a vehicle owner, a body shop,
-        or an attorney, we deliver clear, defensible damage evaluations.
-      </p>
+      <div class="section-head reveal">
+        <span class="kicker">What We Do</span>
+        <h2>Appraisals &amp; claim consulting<br>that move the number.</h2>
+        <p class="lead">Independent, experienced, and built to be defensible. Whether you're a vehicle owner, a body shop, or an attorney — we deliver clear, documented evaluations.</p>
+      </div>
 
       <div class="cards">
-        <div class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3z"/><path d="m9 12 2 2 4-4"/></svg>
           </div>
           <h3>Auto Damage Appraisals</h3>
-          <p>Detailed inspections and itemized damage reports for collision, hail, flood, and total-loss valuations.</p>
-        </div>
+          <p>Detailed inspections and itemized CCC ONE estimates for collision, hail, flood, and storm damage.</p>
+        </article>
 
-        <div class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg>
           </div>
-          <h3>Insurance Claim Consultations</h3>
-          <p>We help you understand your policy, dispute lowball offers, and negotiate fair settlements with insurers.</p>
-        </div>
+          <h3>Diminished Value Claims</h3>
+          <p>Documented loss-of-value reports proving what your vehicle lost after an accident — even once it's repaired.</p>
+        </article>
 
-        <div class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg>
-          </div>
-          <h3>Diminished Value Reports</h3>
-          <p>Documented loss-of-value reports for vehicles that have been in an accident — even after repairs.</p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
-          </div>
-          <h3>Pre-Repair Estimates</h3>
-          <p>Independent estimates before repairs begin so you know what the work should actually cost.</p>
-        </div>
-
-        <div class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6"/></svg>
           </div>
           <h3>Total Loss Valuations</h3>
           <p>Fair-market value reports that protect you when an insurer declares your vehicle a total loss.</p>
-        </div>
+        </article>
 
-        <div class="card">
-          <div class="card-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
           </div>
-          <h3>Expert Witness Services</h3>
+          <h3>Right to Appraisal</h3>
+          <p>When you and your insurer disagree, we invoke the appraisal clause and represent your number.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
+          </div>
+          <h3>Pre-Repair Estimates</h3>
+          <p>Independent estimates before work begins, so you and your shop know what the repair should truly cost.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Expert Witness &amp; Consulting</h3>
           <p>Court-ready reports and testimony for attorneys handling auto-damage and insurance disputes.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CCC ONE INTEGRATION ============ -->
+  <section id="ccc" class="section ccc">
+    <div class="ccc-bg" aria-hidden="true"><div class="hero-grid"></div></div>
+    <div class="container ccc-inner">
+      <div class="ccc-copy reveal">
+        <span class="kicker light">Built on the Industry Standard</span>
+        <h2>We estimate on <span class="grad-text">CCC&nbsp;ONE</span> — the same platform insurers trust.</h2>
+        <p>Over 80% of collision repairers and the major carriers run on the CCC&nbsp;ONE platform. By building your appraisal on the exact tooling adjusters use — VIN-decoded parts, OEM procedures, and current labor rates — our numbers speak their language and are far harder to dismiss.</p>
+        <ul class="feature-list">
+          <li><span class="fl-ico">✓</span> VIN-decoded OEM parts &amp; pricing</li>
+          <li><span class="fl-ico">✓</span> Current regional labor &amp; paint rates</li>
+          <li><span class="fl-ico">✓</span> Documented hidden-damage flags</li>
+          <li><span class="fl-ico">✓</span> USPAP-compliant written reports</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary btn-lg">Start My Estimate</a>
+      </div>
+      <div class="ccc-panel reveal">
+        <div class="estimate-mock">
+          <div class="em-row em-head"><span>Estimate Line</span><span>Op</span><span>Amount</span></div>
+          <div class="em-row"><span>Front bumper cover</span><span class="op rep">REPL</span><span>$612.40</span></div>
+          <div class="em-row"><span>L/front fender</span><span class="op rep">REPL</span><span>$488.10</span></div>
+          <div class="em-row"><span>Headlamp assy, L</span><span class="op rep">REPL</span><span>$734.00</span></div>
+          <div class="em-row"><span>Refinish &amp; blend</span><span class="op rfn">RFN</span><span>$905.25</span></div>
+          <div class="em-row flag"><span>Structural — inspect</span><span class="op fl">FLAG</span><span>TBD</span></div>
+          <div class="em-row em-total"><span>Independent estimate</span><span></span><span>$2,739.75</span></div>
+        </div>
+        <div class="ccc-note">Sample line items — your report is built from your vehicle &amp; photos.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS ============ -->
+  <section id="process" class="section">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">How It Works</span>
+        <h2>Four steps to a stronger claim.</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-num">01</div>
+          <h3>Free Claim Review</h3>
+          <p>Send us your vehicle details, photos, and the insurer's offer. We tell you straight whether you have a case.</p>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-num">02</div>
+          <h3>Inspection &amp; CCC ONE Estimate</h3>
+          <p>We inspect the damage and build an itemized, VIN-accurate estimate on the industry platform.</p>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-num">03</div>
+          <h3>USPAP Report</h3>
+          <p>You receive a clear, defensible written appraisal documenting damage, value, and diminished value.</p>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-num">04</div>
+          <h3>Negotiate &amp; Recover</h3>
+          <p>We back the number with the insurer — and stand behind it through appraisal or litigation if needed.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="about" class="section section-alt">
-    <div class="container about">
-      <div>
-        <h2>Why Collision Appraisal Group</h2>
-        <p>
-          With years of hands-on experience in auto body repair and insurance claim handling,
-          our appraisers know what damage really costs to fix — and what insurers should be paying.
-          We work for <strong>you</strong>, not the insurance company.
-        </p>
+  <!-- ============ DAMAGE GALLERY ============ -->
+  <section class="section gallery-sec">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">The Damage Tells the Story</span>
+        <h2>Every dent documented. Every dollar defended.</h2>
+        <p class="lead">From bumper scuffs to frame damage — we capture, classify, and cost it. Real inspection photos go here.</p>
+      </div>
+      <div class="gallery">
+        <figure class="g-item wide reveal"><div class="g-ph"><span class="g-tag">Front-end collision</span></div></figure>
+        <figure class="g-item reveal"><div class="g-ph"><span class="g-tag">Quarter panel</span></div></figure>
+        <figure class="g-item reveal"><div class="g-ph"><span class="g-tag">Structural / frame</span></div></figure>
+        <figure class="g-item reveal"><div class="g-ph"><span class="g-tag">Paint &amp; refinish</span></div></figure>
+        <figure class="g-item wide reveal"><div class="g-ph"><span class="g-tag">Rear impact</span></div></figure>
+      </div>
+      <p class="gallery-note">Placeholder gallery — drop real inspection photos into <code>assets/</code> and we'll wire them in.</p>
+    </div>
+  </section>
+
+  <!-- ============ WHY US ============ -->
+  <section id="why" class="section why">
+    <div class="container why-inner">
+      <div class="why-copy reveal">
+        <span class="kicker">Why Collision Appraisal Group</span>
+        <h2>Independent means we work for <span class="grad-text">you</span> — not the insurer.</h2>
+        <p>With years in auto body repair and claim handling, our appraisers know what damage actually costs to fix and what insurers should be paying. No carrier relationships. No incentive to lowball. Just an honest, documented number you can stand on.</p>
         <ul class="checks">
-          <li>Independent, unbiased evaluations</li>
-          <li>Licensed and experienced appraisers</li>
-          <li>Clear, itemized written reports</li>
-          <li>Fast turnaround when you need it</li>
-          <li>Statewide service</li>
+          <li>100% independent — never paid by insurance companies</li>
+          <li>Licensed, experienced appraisers</li>
+          <li>Clear, itemized USPAP-compliant reports</li>
+          <li>Fast turnaround when timing matters</li>
+          <li>Serving all of South Florida, 24/7</li>
         </ul>
       </div>
-      <div class="about-callout">
-        <div class="callout-num">100%</div>
-        <p>Independent. We don't work for insurance companies — we work for vehicle owners, shops, and attorneys.</p>
+      <div class="why-stat reveal">
+        <div class="ring">
+          <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="52" class="ring-bg"/><circle cx="60" cy="60" r="52" class="ring-fg" id="ring"/></svg>
+          <div class="ring-center"><strong>100%</strong><span>Independent</span></div>
+        </div>
+        <p>We don't answer to carriers. We answer to vehicle owners, shops, and attorneys.</p>
       </div>
     </div>
   </section>
 
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="section testimonials">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker">In Our Clients' Words</span>
+        <h2>Numbers that held up.</h2>
+      </div>
+    </div>
+    <div class="marquee" aria-hidden="false">
+      <div class="marquee-track">
+        <blockquote class="quote"><p>"Their CCC ONE estimate was thousands above the insurer's offer — and it stuck."</p><cite>— Vehicle owner, Broward</cite></blockquote>
+        <blockquote class="quote"><p>"Recovered diminished value I didn't even know I was owed after my lease return."</p><cite>— Driver, Miami-Dade</cite></blockquote>
+        <blockquote class="quote"><p>"The report was so clean the adjuster barely argued. Professional all the way."</p><cite>— Body shop owner</cite></blockquote>
+        <blockquote class="quote"><p>"Used their appraisal as an expert exhibit. Clear, defensible, court-ready."</p><cite>— Attorney, Palm Beach</cite></blockquote>
+        <!-- duplicate for seamless loop -->
+        <blockquote class="quote"><p>"Their CCC ONE estimate was thousands above the insurer's offer — and it stuck."</p><cite>— Vehicle owner, Broward</cite></blockquote>
+        <blockquote class="quote"><p>"Recovered diminished value I didn't even know I was owed after my lease return."</p><cite>— Driver, Miami-Dade</cite></blockquote>
+        <blockquote class="quote"><p>"The report was so clean the adjuster barely argued. Professional all the way."</p><cite>— Body shop owner</cite></blockquote>
+        <blockquote class="quote"><p>"Used their appraisal as an expert exhibit. Clear, defensible, court-ready."</p><cite>— Attorney, Palm Beach</cite></blockquote>
+      </div>
+    </div>
+    <p class="gallery-note">Sample testimonials — replace with real client reviews.</p>
+  </section>
+
+  <!-- ============ CTA BAND ============ -->
+  <section class="cta-band">
+    <div class="container cta-inner reveal">
+      <h2>Think your offer is too low? It probably is.</h2>
+      <p>Get a free, no-obligation review of your claim from a real appraiser.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary btn-lg" href="tel:+17543008130">Call 754-300-8130</a>
+        <a class="btn btn-light btn-lg" href="mailto:Collisionappraisalgroup@gmail.com">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
   <section id="contact" class="section">
     <div class="container">
-      <h2>Contact Us</h2>
-      <p class="lead">Get in touch for an appraisal or a claim consultation. We respond quickly.</p>
-
-      <div class="contact-grid">
-        <a class="contact-card" href="tel:+17543008130">
-          <div class="contact-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </div>
-          <div>
-            <div class="contact-label">Phone</div>
-            <div class="contact-value">754-300-8130</div>
-          </div>
-        </a>
-
-        <a class="contact-card" href="mailto:Collisionappraisalgroup@gmail.com">
-          <div class="contact-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div>
-            <div class="contact-label">Email</div>
-            <div class="contact-value">Collisionappraisalgroup@gmail.com</div>
-          </div>
-        </a>
-
-        <div class="contact-card static">
-          <div class="contact-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          </div>
-          <div>
-            <div class="contact-label">Service Area</div>
-            <div class="contact-value">South Florida</div>
-          </div>
-        </div>
-
-        <div class="contact-card static">
-          <div class="contact-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div>
-            <div class="contact-label">Hours</div>
-            <div class="contact-value">Available 24/7</div>
-          </div>
-        </div>
+      <div class="section-head reveal">
+        <span class="kicker">Contact</span>
+        <h2>Let's talk about your claim.</h2>
+        <p class="lead">Reach out for an appraisal or a claim consultation. We respond fast — day or night.</p>
       </div>
 
-      <div class="contact-cta">
-        <a class="btn btn-primary btn-lg" href="mailto:Collisionappraisalgroup@gmail.com">Email Us</a>
-        <a class="btn btn-ghost btn-lg" href="tel:+17543008130">Call Now</a>
+      <div class="contact-grid">
+        <a class="contact-card reveal" href="tel:+17543008130">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div><div class="contact-label">Phone</div><div class="contact-value">754-300-8130</div></div>
+        </a>
+        <a class="contact-card reveal" href="mailto:Collisionappraisalgroup@gmail.com">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="contact-label">Email</div><div class="contact-value">Collisionappraisalgroup@gmail.com</div></div>
+        </a>
+        <div class="contact-card static reveal">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="contact-label">Service Area</div><div class="contact-value">South Florida</div></div>
+        </div>
+        <div class="contact-card static reveal">
+          <div class="contact-icon"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <div><div class="contact-label">Hours</div><div class="contact-value">Available 24/7</div></div>
+        </div>
       </div>
     </div>
   </section>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div>
-        <strong>Collision Appraisal Group</strong>
+      <div class="footer-brand">
+        <strong>COLLISION APPRAISAL GROUP</strong>
         <p>Auto Damage Experts &amp; Claim Consultants</p>
       </div>
-      <div>
-        <p>Collisionappraisalgroup@gmail.com</p>
-        <p>754-300-8130</p>
-        <p>South Florida &middot; Available 24/7</p>
+      <div class="footer-col">
+        <p><a href="tel:+17543008130">754-300-8130</a></p>
+        <p><a href="mailto:Collisionappraisalgroup@gmail.com">Collisionappraisalgroup@gmail.com</a></p>
+        <p>South Florida · Available 24/7</p>
       </div>
-      <div class="copy">
-        &copy; <span id="year"></span> Collision Appraisal Group. All rights reserved.
+      <div class="footer-disc">
+        <p>We are licensed independent appraisers and claim consultants — not attorneys. Estimates are based on the information and photos provided and are subject to in-person verification.</p>
+        <p class="copy">&copy; <span id="year"></span> Collision Appraisal Group. All rights reserved.</p>
       </div>
     </div>
   </footer>
